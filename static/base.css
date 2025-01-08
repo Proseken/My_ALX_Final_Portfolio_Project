@@ -1,0 +1,57 @@
+/* nav */
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-blue);
+    box-shadow: 0 2px 0 rgba(127, 16, 33, 0.9);
+    z-index: 10;
+  }
+  
+  .nav-list {
+    display: flex;
+    margin-right: 2rem;
+  }
+
+  .nav-list .home {
+    margin-right: auto; /* Push the home icon to the left */
+  }
+  
+  .nav-list li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 2.5rem; /* Icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Add hover effect */
+  .nav-list li a:hover {
+    color: #00bcd4; /* Highlight color */
+  }
+  
+  @media (max-width: 28.75em) {
+    .nav {
+      justify-content: center;
+    }
+  
+    .nav-list {
+      margin: 0 1rem;
+    }
+  }
+  
+  .nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+  }
+  
+  .nav-list a:hover {
+    background: var(--main-blue);
+  }
+  
