@@ -1,0 +1,58 @@
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='services.css') }}">
+{% endblock %}
+{% block content %}
+<body>
+    <nav>
+        <div class="brand"></div>
+        <div>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('SignDocument') }}">SignDocument</a>
+        </div>
+    </nav>
+    <header class="header">
+        <h1>Notary Services</h1>
+        <p>Your trusted partner in legal documentation. Our expert notary services are designed to provide you with peace of mind and ensure your documents meet legal standards. We are committed to delivering accuracy, reliability, and confidentiality in all our services.</p>
+    </header>
+
+    <main class="container">
+        <article class="service">
+            <h2>Document Notarization</h2>
+            <p>Our professional notarization service ensures the authenticity and validity of your official documents. Whether it's an agreement, power of attorney, or any legal document, we guarantee compliance with all regulatory standards. Our notary experts carefully verify the identity of signatories and witness the signing process to prevent fraud. We understand the importance of these documents in your personal and professional life, and we handle them with utmost care. With our service, you can trust that your notarized documents will be accepted wherever required. Let us assist you in securing your legal rights with professionally notarized documents.</p>
+        </article>
+
+        <article class="service">
+            <h2>Affidavit Preparation</h2>
+            <p>Drafting affidavits can be a complex process, but we simplify it by tailoring the documents to your specific needs. Our team works closely with you to ensure all details are accurate and compliant with legal standards. Whether for court proceedings, administrative purposes, or personal declarations, we provide precise and professionally drafted affidavits. We also explain the content of the affidavit in plain language so you understand what you are signing. From simple declarations to detailed legal statements, we ensure your affidavit is error-free and admissible in legal contexts. Rely on our expertise to create an affidavit that protects your interests.</p>
+        </article>
+
+        <article class="service">
+            <h2>Certified True Copy</h2>
+            <p>Many institutions require certified true copies of important documents like academic certificates, identification cards, or property deeds. We provide certification services to verify that copies of your original documents are authentic and accurate. Our meticulous process ensures that every certified true copy meets the highest standards of legality. We take the time to compare the copies with the originals and add an official seal of certification. Whether you're applying for a visa, submitting legal paperwork, or handling corporate matters, our service ensures compliance with requirements. Trust us to certify your documents efficiently and professionally.</p>
+        </article>
+        <article class="service">
+            <h2>Oaths and Declarations</h2>
+            <p>
+                Taking an oath or making a declaration is a solemn act that carries legal weight. Our notary professionals guide you through the process, ensuring that your statements comply with legal requirements. Whether you're swearing an affidavit, a statutory declaration, or an oath of allegiance, we handle the process with dignity and professionalism. We also provide clear explanations of the legal implications of your oath or declaration to ensure you are fully informed. With our help, you can complete this formal process quickly and with confidence. Our service is tailored to both individuals and businesses needing reliable assistance with declarations.
+            </p>
+        </article>
+    
+        <article class="service">
+            <h2>Wills and Testament</h2>
+            <p>
+                Creating a will is one of the most important steps in securing your legacy for future generations. Our team helps you draft wills and testaments that clearly outline your wishes regarding property distribution and guardianship. We ensure that your will is legally sound, reducing the chances of disputes among beneficiaries. Our notary services also authenticate the document, making it valid in the eyes of the law. We handle the process with sensitivity and confidentiality, understanding the personal nature of this task. With our expertise, you can have peace of mind knowing that your legacy is protected. Let us help you create a will that reflects your intentions and values.
+            </p>
+        </article>
+    
+        <article class="service">
+            <h2>Contract Notarization</h2>
+            <p>
+                Contracts are legally binding agreements, and notarization adds an extra layer of credibility and security. Our notary experts ensure that all parties involved in the contract understand their obligations and sign willingly. We also verify the identity of signatories to prevent fraud and authenticate the document with an official seal. Whether you're dealing with business agreements, real estate contracts, or partnership deals, our service guarantees compliance with legal standards. Properly notarized contracts reduce the risk of disputes and increase enforceability. Trust us to provide fast, accurate, and professional contract notarization services to protect your interests.
+            </p>
+        </article>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Notary Services | All Rights Reserved</p>
+    </footer>
+</body>
+{% endblock %}
