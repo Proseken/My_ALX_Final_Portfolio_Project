@@ -1,0 +1,69 @@
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='Register.css') }}">
+{% endblock %}
+{% block content %}
+<nav>
+    <div class="brand"></div>
+    <div>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('SignDocument') }}">SignDocument</a>
+    </div>
+</nav>
+<div class="container w-50">
+<form id="survey-form" method="POST" action="/Register" enctype="multipart/form-data">
+{{ form.hidden_tag() }}
+<Fieldset>
+    <header class="header">
+        <h1 id="title" class="text-center">Notary Service Registration Form</h1>
+        <p id="description" class="description text-center">
+            enter your correct data
+        </p>
+    </header>
+    <div class="form-group">
+        {{ form.username.label }}
+        {{ form.username(class="form-control", placeholder="Enter your username") }}
+        {% if form.username.errors %}
+            {% for error in form.username.errors %}
+                <span class="text-danger">{{ error }}</span>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="form-group">
+        {{ form.email.label }}
+        {{ form.email(class="form-control", placeholder="Enter your email") }}
+        {% if form.email.errors %}
+            {% for error in form.email.errors %}
+                <span class="text-danger">{{ error }}</span>
+            {% endfor %}
+        {% endif %}
+    </div>    
+    <div class="form-group">
+        {{ form.password.label }}
+        {{ form.password(class="form-control", placeholder="Enter your password") }}
+        {% if form.password.errors %}
+            {% for error in form.password.errors %}
+                <span class="text-danger">{{ error }}</span>
+            {% endfor %}
+        {% endif %}
+    </div>    
+    <div class="form-group">
+        {{ form.confirm_password.label }}
+        {{ form.confirm_password(class="form-control", placeholder="Enter your re-enter password") }}
+        {% if form.confirm_password.errors %}
+            {% for error in form.confirm_password.errors %}
+                <span class="text-danger">{{ error }}</span>
+            {% endfor %}
+        {% endif %}
+    </div>        
+
+</Fieldset>
+<FIeldset type="submit" class="submit-button">
+    {{form.submit}}
+</FIeldset>
+<p class="redirect">Already have an account? <a href="{{ url_for('login') }}">Log in</a></p>
+    </form>
+</div>
+
+
+{% endblock content %}
