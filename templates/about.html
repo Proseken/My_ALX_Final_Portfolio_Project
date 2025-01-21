@@ -1,0 +1,59 @@
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+{% endblock %}
+{% block content %}
+<body>
+    <nav>
+        <div class="brand"></div>
+        <div>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('SignDocument') }}">SignDocument</a>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1>About Nduke Sunday</h1>
+                <p>Hello! My name is Nduke Sunday, and I am a passionate tech enthusiast, educator, and aspiring backend software engineer. With over six years of teaching experience, I am dedicated to sharing knowledge and inspiring others, especially kids, to explore the exciting world of technology.</p>
+                
+                <h2>Professional Background</h2>
+                <p>I specialize in backend development and have a strong interest in using Python, JavaScript, and modern web development frameworks. Currently, I am working on projects that involve Flask, JavaScript, and the MERN stack. One of my primary focuses is developing a Learning Management System (LMS) and a digital notary public platform.</p>
+                
+                <h2>Passion for Education</h2>
+                <p>I am passionate about teaching kids coding and ICT concepts in a way that is engaging and visually intuitive. Through my company, NIOUN, I aim to empower kids aged 9-16 by offering lessons in programming, cybersecurity, and more.</p>
+                
+                <h2>ALX Journey</h2>
+                <p>I am currently an ALX Software Engineering student, where I have been honing my skills in software development and problem-solving. The program has provided me with a solid foundation in computer science, coding best practices, and collaboration within a global community of learners.</p>
+                
+                <h2>Virtual Assistant Experience</h2>
+                <p>In addition to my tech journey, I have experience as a Virtual Assistant, specializing in data entry, visual aid tasks, and social media management. My skills in organization and communication have allowed me to excel in providing support to clients efficiently and effectively.</p>
+                
+                <h2>Projects and Goals</h2>
+                <ul>
+                    <li>Building a unique portfolio project that integrates education and technology.</li>
+                    <li>Developing a web stack notary public platform using Flask.</li>
+                    <li>Creating subject formula lesson notes for students to simplify learning.</li>
+                </ul>
+                
+                <h2>Why Technology?</h2>
+                <p>I believe technology is a powerful tool for transformation. My journey from teaching to backend development has allowed me to explore creative ways to solve problems and innovate solutions that make a difference.</p>
+                
+                <h2>Skills and Interests</h2>
+                <ul>
+                    <li>Backend Development (Python, Flask)</li>
+                    <li>Frontend Development (React, Vite, JavaScript)</li>
+                    <li>Database Management (MySQL)</li>
+                    <li>Teaching and Curriculum Development</li>
+                    <li>Training on Google Suite Tools</li>
+                </ul>
+                
+                <h2>About NIOUN</h2>
+                <p>My company, NIOUN, is committed to advancing property, education, and technology. Through NIOUN, I aim to create impactful solutions that benefit individuals and communities.</p>
+                
+                <h2>Get in Touch</h2>
+                <p>If you'd like to collaborate or learn more about my work, feel free to reach out. Let's make something amazing together!</p>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
