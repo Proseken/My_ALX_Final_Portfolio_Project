@@ -1,0 +1,61 @@
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+{% endblock %}
+{% block content %}
+<nav>
+    <div class="brand">Dashboard</div>
+    <div>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('SignDocument') }}">SignDocument</a>
+    </div>
+</nav>
+<script>
+    function confirmLogout() {
+        if (confirm("Are you sure you want to log out?")) {
+            window.location.href = "{{ url_for('logout') }}";
+        }
+    }
+</script>
+<div class="container">
+    <h1>Notary Dashboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Service Type</th>
+                <th>Comment</th>
+                <th>Category</th>
+                <th>Document</th>
+                <th>Date Created</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for request in notary_requests %}
+            <tr>
+                <td>{{ request.id }}</td>
+                <td>{{ request.full_name }}</td>
+                <td>{{ request.email }}</td>
+                <td>{{ request.age or 'N/A' }}</td>
+                <td>{{ request.service_type }}</td>
+                <td>{{ request.comment or 'None' }}</td>
+                <td>{{ request.user_category }}</td>
+                <td>{{ request.document_path or 'Not Uploaded' }}</td>
+                <td>{{ request.date_created.strftime('%Y-%m-%d') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    {% if current_user.is_authenticated %}
+        <button class="logout-btn" onclick="confirmLogout()">Logout</button>
+    {% else %}
+        <a href="{{ url_for('login') }}">Login</a>
+    {% endif %}
+  
+</div>
+{% endblock %}
