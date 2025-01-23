@@ -88,6 +88,8 @@ project/
 1. **Home Page**: Navigate to the home page to explore the application.
 2. **Sign Document**: Fill out the form to submit a notary request.
 3. **Submissions**: View all submitted notary requests.
+4. **About Page**: A little information about the makers.
+5. **Services**: View the services we provide.
 
 ---
 
